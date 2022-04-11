@@ -2,6 +2,7 @@ package com.example.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.mariuszgromada.math.mxparser.*;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
 import android.view.View;
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clearButton(android.view.View view) {
-        updateText("");
+        display.setText("");
     }
 
     public void addButton(android.view.View view) {
@@ -110,11 +111,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void equalsButton(android.view.View view) {
+        String userExp = display.getText().toString();
 
+        userExp = userExp.replaceAll("÷", "/");
+
+        Expression exp = new Expression(userExp);
+        String result = String.valueOf(exp.calculate());
+
+        display.setText(result);
     }
 
     public void parenthesesButton(android.view.View view) {
+        int cursorPos = display.getSelectionStart();
+        int openPar = 0;
+        int closedPar = 0;
+        int textLen = display.getText().length();
 
+        for(int i = 0; i < cursorPos; ++i) {
+            if(display.getText().toString().substring(i, i +1 ).equals("(")) {
+                openPar += 1;
+            }
+            if(display.getText().toString().substring(i, i +1 ).equals(")")) {
+                closedPar += 1;
+            }
+        }
+
+        if(openPar == closedPar || display.getText().toString().substring(textLen - 1, textLen).equals("(")) {
+            updateText("(");
+        } else if(openPar > closedPar && !display.getText().toString().substring(textLen - 1, textLen).equals("(")) {
+            updateText(")");
+        }
+        display.setSelection(cursorPos + 1);
     }
 
     public void exponentButton(android.view.View view) {
