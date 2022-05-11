@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db0b20af-77b0-4e13-8e2b-604edf111cdf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Calculator/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Calculator/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\mibuc\.android\avd\Pixel_2_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -36,7 +37,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Android App.Lab1.Calculator.app">
+  <component name="RunManager">
     <configuration name="Lab1.Calculator.app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="Lab1.Calculator.app" />
       <option name="DEPLOY" value="true" />
@@ -165,6 +166,8 @@
       <option name="presentableId" value="Default" />
       <updated>1645079261102</updated>
       <workItem from="1649231682389" duration="26000" />
+      <workItem from="1649988206935" duration="275000" />
+      <workItem from="1650610861283" duration="69000" />
     </task>
     <servers />
   </component>
