@@ -14,35 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val SDK_INT = android.os.Build.VERSION.SDK_INT;
-        if (SDK_INT > 8) {
-            val policy = StrictMode.ThreadPolicy.Builder()
-                .permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
-
-
         val countryList = CountryList()
-        val choosenCountry = Country()
-
-        val countriesListURL = "https://api.covid19api.com/countries"
-        val choosenCountryURL = "https://api.covid19api.com/country/"
-
-        val btn = findViewById<Button>(R.id.button)
-        val countryListText = findViewById<TextView>(R.id.countryList)
 
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.countryListFragment, choosenCountry)
-            addToBackStack(null)
+            add(R.id.countryListFragment, countryList)
             commit()
-        }
-
-        btn.setOnClickListener {
-            var apiResponse = URL(countriesListURL).readText()
-            Log.d("response", apiResponse)
-            val countryListArray = apiResponse
-
-            countryListText.setText(countryListArray)
         }
     }
 }

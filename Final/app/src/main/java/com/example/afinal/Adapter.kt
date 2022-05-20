@@ -8,8 +8,8 @@ import com.example.afinal.Country
 import com.example.afinal.databinding.CountryItemBinding
 
 class Adapter(
+    var countries: List<Country>
 ): RecyclerView.Adapter<Adapter.CountryViewHolder>() {
-    var countries: List<Country> = emptyList()
 
     inner class CountryViewHolder(
         private val binding: CountryItemBinding
